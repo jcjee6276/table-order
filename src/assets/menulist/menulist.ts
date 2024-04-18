@@ -1,0 +1,73 @@
+export const menulist = [
+  {
+    menuName: "마르게리따 피자",
+    price: 32000,
+    imageUrl: "/images/pizza_m.png",
+    detail:
+      "이탈리아 요리 중 피자의 일종. 현재 이탈리아 피자협회가 인정한 '전통 나폴리 피자' 중의 하나다.",
+    itemNo: 1,
+  },
+  {
+    menuName: "클래식 피자",
+    price: 22000,
+    imageUrl: "/images/pizza_c.jpg",
+    detail: "기본에 충실한 베스트 토핑을 합리적인 가격에 즐기는 피자",
+    itemNo: 2,
+  },
+  {
+    menuName: "페페로니 피자",
+    price: 26000,
+    imageUrl: "/images/pizza_p.jpg",
+    detail: "페페로니가 잔뜩 들어간 미국식 피자.",
+    itemNo: 3,
+  },
+  {
+    menuName: "야채 피자",
+    price: 12000,
+    imageUrl: "/images/pizza_b.jpg",
+    detail: "먹으면 건강할 것 같은 피자.",
+    itemNo: 4,
+  },
+  {
+    menuName: "하와이안 피자",
+    price: 32000,
+    imageUrl: "/images/pizza_h.jpg",
+    detail: "쓰레기",
+    itemNo: 5,
+  },
+  {
+    menuName: "민트초코 피자",
+    price: 82000,
+    imageUrl: "/images/pizza_mc.jpg",
+    detail: "누군가의 용기있는 도전이 담긴 피자",
+    itemNo: 6,
+  },
+  {
+    menuName: "초코 피자",
+    price: 112000,
+    imageUrl: "/images/pizza_ch.jpg",
+    detail: "이것을 돈 주고 사먹을 텐가",
+    itemNo: 7,
+  },
+  {
+    menuName: "치즈 피자",
+    price: 31000,
+    imageUrl: "/images/pizza_cz.jpg",
+    detail: "피자가 먹고 싶어지는 피자 기본에 충실한 피자",
+    itemNo: 8,
+  },
+  {
+    menuName: "엄마가해준 피자",
+    price: 0,
+    imageUrl: "/images/pizza_mom.jpg",
+    detail: "해주면 맛 있지만 알고 있는 그 맛의 느낌은 안나는 피자.",
+    itemNo: 9,
+  },
+  {
+    menuName: "편의점 피자",
+    price: 3000,
+    imageUrl: "/images/pizza_pz.jpg",
+    detail: "가성비 갑 피자",
+    itemNo: 10,
+  },
+];

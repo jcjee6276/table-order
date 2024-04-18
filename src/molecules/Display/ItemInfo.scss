@@ -1,0 +1,51 @@
+.grid-item {
+
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+  text-align: center;
+
+}
+
+.grid-image {
+  cursor: pointer;
+  border-radius: 5px;
+  width: 300px;
+  height: 300px;
+}
+
+.grid-font-menu-name {
+  color: #000;
+  /* H4_18 */
+  font-family: SUIT;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 35px;
+}
+
+.grid-font-price {
+  color: var(--main-color, #C90000);
+  text-align: center;
+  /* H5_16 */
+  font-family: SUIT;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 16px; /* 100% */
+}
+
+@media screen and (max-width: 1480px){
+  .grid-image {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 1120px){
+  .grid-image {
+    width: 140px;
+    height: 140px;
+  }
+}
+

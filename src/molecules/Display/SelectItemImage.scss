@@ -1,0 +1,20 @@
+.item-image-container {
+  display: flex;
+}
+
+.item-image-area {
+  margin: 2% 12%;
+  width: 690px;
+  height: 518px;
+  border-radius: 12px;
+
+}
+
+.select-item-liner {
+  display: inline-block;
+  width: 1px;
+  height: 89vh;
+  flex-shrink: 0;
+  background: var(--gray_D9D9D9, #D9D9D9);
+}
+

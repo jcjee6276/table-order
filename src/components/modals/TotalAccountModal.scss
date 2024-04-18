@@ -1,0 +1,32 @@
+.total-account-container {
+  width: 20%;
+  height: 75px;
+  position: absolute;
+  bottom: 70px;
+  flex-shrink: 0;
+  background: #FFECE4;
+
+  align-content: center;
+
+
+}
+
+.total-font {
+  color: #000;
+
+  /* H1_30 */
+  font-family: SUIT;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px; /* 100% */
+
+}
+
+.total-font-container {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  margin-left: 10px;
+
+}

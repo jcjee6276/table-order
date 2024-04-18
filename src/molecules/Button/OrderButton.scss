@@ -1,0 +1,24 @@
+.order-button {
+  width: 62%;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: var(--main-color, #C90000);
+  text-align: center;
+  align-content: center;
+  display: inline-block;
+  //position: absolute;
+  //bottom: 0;
+}
+
+.order-button-font {
+  color: #FFF;
+  text-align: center;
+
+  /* H2_24 */
+  font-family: SUIT;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 100% */
+}

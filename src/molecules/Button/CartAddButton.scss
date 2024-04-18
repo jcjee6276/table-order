@@ -1,0 +1,23 @@
+.cart-add-button-container {
+  margin-top: 20px;
+  width: 510px;
+  height: 80px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: var(--main-color, #C90000);
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+
+}
+
+.cart-add-font {
+  color: #FFF;
+
+  text-align: center;
+  font-family: SUIT;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+}

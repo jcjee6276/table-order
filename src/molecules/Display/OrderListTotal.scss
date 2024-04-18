@@ -1,0 +1,33 @@
+.order-list-total-item {
+  background: var(--Color, #F4F7FC);
+  padding: 20px;
+  //background: var(--blue, #CDF);
+  border-top: 1px solid #CDF;
+  border-bottom: 1px solid #CDF;
+
+
+  &.head-font {
+    color: #000;
+
+    /* H2_24 */
+    font-family: SUIT;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px; /* 100% */
+  }
+
+  &.text-right {
+    text-align: right;
+  }
+}
+
+.list-grid-footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 96%;
+  padding: 1% 2%;
+  position: fixed;
+  bottom: 0;
+
+}

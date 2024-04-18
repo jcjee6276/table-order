@@ -1,0 +1,25 @@
+.close-button {
+  width: 32%;
+  height: 60px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: #8B8C8B;
+  text-align: center;
+  align-content: center;
+  margin: 0 3px;
+  display: inline-block;
+
+  //position: absolute;
+  //bottom: 0;
+}
+
+.close-button-font {
+  color: #FFF;
+
+  /* H2_24 */
+  font-family: SUIT;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: initial;
+}

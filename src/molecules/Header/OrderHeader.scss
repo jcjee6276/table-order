@@ -1,0 +1,26 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 95% 5%;
+
+}
+
+.order-head-box {
+  flex-shrink: 0;
+  background: var(--red_sub, #00034D);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+
+.order-head-font {
+  color: var(--white, #FFF);
+  /* H1_30 */
+  font-family: SUIT;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px; /* 100% */
+
+}

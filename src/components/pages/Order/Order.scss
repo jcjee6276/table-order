@@ -1,0 +1,50 @@
+.body {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.order-container {
+  width: 75vw;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  overflow-y: auto;
+}
+
+.order-container::-webkit-scrollbar {
+  display: none;
+}
+
+.cart-container {
+  width: 25vw;
+  height: 100vh;
+  border-radius: 0px 0px 16px 0px;
+  background: #FFF4F4;
+  justify-content: center;
+}
+
+.cart-body-container {
+  overflow-y: auto;
+  height: 75vh;
+}
+
+.cart-body-container::-webkit-scrollbar {
+  display: none;
+}
+
+.button-container {
+
+  position: absolute;
+  bottom: 0;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.button-area {
+  width: 100%;
+
+  justify-content: center;
+
+}
