@@ -9,18 +9,23 @@ import OrderCloseButton from "../../../molecules/Button/OrderCloseButton";
 import { menulist } from "../../../assets/menulist/menulist";
 import { useNavigate } from "react-router-dom";
 
+import { ROUTE } from "../../../constants/Route";
+
 function Order() {
   const navigate = useNavigate();
   const [menu, setMenu] = useState([...menulist]);
 
   const handleClickMenu = (itemNo: number): any => {
-    navigate("/order/" + itemNo);
+    navigate(ROUTE.ORDER + "/" + itemNo);
+  };
+
+  const goToMain = () => {
+    navigate(ROUTE.INIT);
   };
   return (
     <body className={"body"}>
       <div className={"order-container"}>
         {menu.map((item, index: number) => {
-          // console.log(index);
           return (
             <Item
               className={item.menuName}
@@ -47,7 +52,7 @@ function Order() {
         <div className={"button-area"}>
           {/*<TotalAccountModal />*/}
           <div className={"button-container"}>
-            <OrderCloseButton />
+            <OrderCloseButton onClick={goToMain} />
             <OrderButton />
           </div>
         </div>
