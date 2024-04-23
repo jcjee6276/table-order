@@ -1,17 +1,23 @@
 import React from "react";
 import "./OrderListItem.scss";
 
-function OrderListItem() {
+import { OrderItemData } from "../../types/api/item/order";
+
+function OrderListItem(orderItemData: OrderItemData) {
   return (
     <div className={"order-list-item-container"}>
       <div className={"list-grid-body-item body-font"}>
-        제주 위트에일 1,000ml
+        {orderItemData.MENU}
       </div>
-      <div className={"list-grid-body-item body-font text-center"}>1개</div>
       <div className={"list-grid-body-item body-font text-center"}>
-        32,000원
+        {orderItemData.QTY}개
       </div>
-      <div className={"list-grid-body-item body-font text-right"}>32,000원</div>
+      <div className={"list-grid-body-item body-font text-center"}>
+        {orderItemData.itemPrice}원
+      </div>
+      <div className={"list-grid-body-item body-font text-right"}>
+        {orderItemData.orderPrice}원
+      </div>
     </div>
   );
 }

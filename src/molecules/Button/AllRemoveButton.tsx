@@ -1,9 +1,13 @@
 import React from "react";
 import "./AllRemoveButton.scss";
 
-function AllRemoveButton() {
+export type AllRemoveButtonProps = {
+  onClick(): void;
+};
+
+function AllRemoveButton(allRemoveButtonProps: AllRemoveButtonProps) {
   return (
-    <div className={"container"}>
+    <div className={"container"} onClick={allRemoveButtonProps.onClick}>
       <div className={"icon"}></div>
       <span className={"text"}>전체삭제</span>
     </div>
