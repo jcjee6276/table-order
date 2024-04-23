@@ -10,26 +10,30 @@ import { menulist } from "../../../assets/menulist/menulist";
 import { useNavigate } from "react-router-dom";
 import TotalAccountModal from "../../modals/TotalAccountModal";
 
-import { allRemoveItem, orderItemList } from "../../../redux/basketSlice";
+import {
+  allRemoveItem,
+  modalClose,
+  orderItemList,
+} from "../../../redux/basketSlice";
 
 import { ROUTE } from "../../../constants/Route";
 import { useDispatch, useSelector } from "react-redux";
 
 function Order() {
   const navigate = useNavigate();
-  const [isOpen, setIsOpen] = useState(false);
+
   const dispatch = useDispatch();
   const [menu, setMenu] = useState([...menulist]);
   let totalPrice = 0;
 
   const allRemoveButton = () => dispatch(allRemoveItem());
 
-  const OpenCartModal = () => {
-    setIsOpen(true);
-  };
+  const getModalStatus = useSelector((state: any) => {
+    return state.basketSlice.modalOpen;
+  });
 
-  const CloseCartModal = () => {
-    setIsOpen(false);
+  const handleClickCloseButton = () => {
+    dispatch(modalClose());
   };
 
   const handleClickOrderButton = () => {
@@ -71,34 +75,35 @@ function Order() {
           );
         })}
       </div>
+      {getModalStatus && (
+        <div className={"cart-container"}>
+          <AllRemoveButton onClick={allRemoveButton} />
 
-      <div className={"cart-container"}>
-        <AllRemoveButton onClick={allRemoveButton} />
+          <div className={"cart-body-container"}>
+            {menuItem.map((item: any, index: number) => {
+              const orderPrice = item.price * item.QTY;
 
-        <div className={"cart-body-container"}>
-          {menuItem.map((item: any, index: number) => {
-            const orderPrice = item.price * item.QTY;
+              return (
+                <CartItemList
+                  MENU={item.menuName}
+                  PRICE={orderPrice}
+                  QTY={item.QTY}
+                  itemNo={item.itemNo}
+                  basketIdx={index}
+                ></CartItemList>
+              );
+            })}
+          </div>
 
-            return (
-              <CartItemList
-                MENU={item.menuName}
-                PRICE={orderPrice}
-                QTY={item.QTY}
-                itemNo={item.itemNo}
-                basketIdx={index}
-              ></CartItemList>
-            );
-          })}
-        </div>
-
-        <div className={"button-area"}>
-          <TotalAccountModal totalPrice={totalPrice} />
-          <div className={"button-container"}>
-            <OrderCloseButton onClick={goToMain} />
-            <OrderButton onClick={handleClickOrderButton} />
+          <div className={"button-area"}>
+            <TotalAccountModal totalPrice={totalPrice} />
+            <div className={"button-container"}>
+              <OrderCloseButton onClick={handleClickCloseButton} />
+              <OrderButton onClick={handleClickOrderButton} />
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </body>
   );
 }

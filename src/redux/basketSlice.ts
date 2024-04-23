@@ -7,6 +7,7 @@ export type BasketSliceState = {
   basketIdx: number;
   basket: BasketItemData[];
   orderList: OrderItemData[];
+  modalOpen: boolean;
 };
 
 const initialState: BasketSliceState = {
@@ -14,6 +15,7 @@ const initialState: BasketSliceState = {
   basketIdx: -1,
   basket: [],
   orderList: [],
+  modalOpen: false,
 };
 
 const basketSlice = createSlice({
@@ -28,6 +30,7 @@ const basketSlice = createSlice({
         idx: state.basketIdx,
       };
       state.basket.push(countItem);
+      state.modalOpen = true;
     },
     downCountItem: (state, action) => {
       state.basket.forEach((item: any, index: number) => {
@@ -54,10 +57,15 @@ const basketSlice = createSlice({
       state.orderList = state.basket;
       state.basket = [];
     },
+
+    modalClose: (state) => {
+      state.modalOpen = false;
+    },
   },
 });
 
 export const {
+  modalClose,
   orderItemList,
   removeItem,
   allRemoveItem,
